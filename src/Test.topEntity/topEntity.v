@@ -9,46 +9,56 @@ module topEntity
 
 
       // Outputs
-    , output wire  result_0
-    , output wire  result_1
+    , output wire  out0
+    , output wire  out1
     );
-  wire [26:0] c$s1_case_alt;
-  wire  result_4;
-  wire [25:0] s;
+  wire  c$app_arg;
+  wire [25:0] c$s1_case_alt;
+  wire  result_0;
+  wire [24:0] s;
   wire  i;
-  reg [26:0] s1 = {26'd0,   1'b0};
-  wire [0:0] c$app_arg;
-  wire  c$rst;
+  reg [25:0] s1 = {25'd0,   1'b0};
+  wire [0:0] c$app_arg_0;
   wire [1:0] result;
 
-  assign c$s1_case_alt = (s == 26'd49999999) ? {26'd0,
-                                                ~ i} : {s + 26'd1,   i};
+  // resetGen begin
+  // pragma translate_off
+  reg  rst;
+  localparam reset_period = 1000000 - 10 + (1 * 100000);
+  initial begin
+    #1 rst =  1 ;
+    #reset_period rst =  0 ;
+  end
+  assign c$app_arg = rst;
+  // pragma translate_on
+  // resetGen end
 
-  assign result_4 = s1[0:0];
+  assign c$s1_case_alt = (s == 25'd26999999) ? {25'd0,
+                                                ~ i} : {s + 25'd1,   i};
 
-  assign s = s1[26:1];
+  assign result_0 = s1[0:0];
+
+  assign s = s1[25:1];
 
   assign i = s1[0:0];
 
-  assign c$rst = (1'b0);
-
   // register begin
-  always @(posedge clk or  posedge  c$rst) begin : s1_register
-    if ( c$rst) begin
-      s1 <= {26'd0,   1'b0};
+  always @(posedge clk or  posedge  c$app_arg) begin : s1_register
+    if ( c$app_arg) begin
+      s1 <= {25'd0,   1'b0};
     end else begin
       s1 <= c$s1_case_alt;
     end
   end
   // register end
 
-  assign result = {(c$app_arg),   1'b0};
+  assign result = {(c$app_arg_0),   1'b0};
 
-  assign c$app_arg = result_4 ? 1'b1 : 1'b0;
+  assign c$app_arg_0 = result_0 ? 1'b1 : 1'b0;
 
-  assign result_0 = result[1:1];
+  assign out0 = result[1:1];
 
-  assign result_1 = result[0:0];
+  assign out1 = result[0:0];
 
 
 endmodule

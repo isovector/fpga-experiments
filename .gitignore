@@ -1,5 +1,3 @@
 build/
 *.o
 *.hi
-*.json
-*.sdc
