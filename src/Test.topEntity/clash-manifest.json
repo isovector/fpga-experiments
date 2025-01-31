@@ -35,14 +35,14 @@
         },
         {
             "name": "topEntity.v",
-            "sha256": "3f9677dd9d619106cd6a66d2cf037a6229bc3d8995e43a0499860d4d1af89316"
+            "sha256": "cf465b03f2d70e336ed5b9e7570b45ab18b5aec5b23c85b4a8776d6d645fa607"
         }
     ],
     "flags": [
         20,
         20
     ],
-    "hash": "af108c819c770a190d56ffdc216a1bf1a6d582dfb4216a431f9498c4678f8f6c",
+    "hash": "ec35ea9c2a45ced1eb2453461abaaf17839bd7b18cfb326965b9f0c0b04763b6",
     "top_component": {
         "name": "topEntity",
         "ports_flat": [
@@ -57,14 +57,56 @@
             {
                 "direction": "out",
                 "is_clock": false,
-                "name": "out0",
+                "name": "hsync",
                 "type_name": "",
                 "width": 1
             },
             {
                 "direction": "out",
                 "is_clock": false,
-                "name": "out1",
+                "name": "vsync",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "gnd",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "all_gnd",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "red",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "green",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "blue",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "yvis",
                 "type_name": "",
                 "width": 1
             }

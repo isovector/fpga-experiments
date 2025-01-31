@@ -9,17 +9,147 @@ module topEntity
 
 
       // Outputs
-    , output wire  out0
-    , output wire  out1
+    , output wire  hsync
+    , output wire  vsync
+    , output wire  gnd
+    , output wire  all_gnd
+    , output wire  red
+    , output wire  green
+    , output wire  blue
+    , output wire  yvis
     );
   wire  c$app_arg;
-  wire [25:0] c$s1_case_alt;
-  wire  result_0;
-  wire [24:0] s;
-  wire  i;
-  reg [25:0] s1 = {25'd0,   1'b0};
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r = 10'd0;
+  wire [10:0] result_0;
+  wire [10:0] z;
+  wire [9:0] result_1;
+  wire  result_2;
+  // /home/sandy/prj/fpga-experiments/Test.hs:79:1-5
+  wire [9:0] a1;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_0 = 10'd0;
+  wire [10:0] result_3;
+  wire [10:0] z_0;
+  wire [9:0] result_4;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [8:0] r_1 = 9'd0;
+  wire [9:0] result_5;
+  wire [9:0] z_1;
+  wire [8:0] result_6;
+  wire [8:0] result_7;
+  wire  result_8;
+  wire  result_9;
+  // /home/sandy/prj/fpga-experiments/Test.hs:61:1-3
+  wire [8:0] x;
   wire [0:0] c$app_arg_0;
-  wire [1:0] result;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_2 = 10'd0;
+  wire [10:0] result_10;
+  wire [10:0] z_2;
+  wire [9:0] result_11;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [8:0] r_3 = 9'd0;
+  wire [9:0] result_12;
+  wire [9:0] z_3;
+  wire [8:0] result_13;
+  wire [8:0] result_14;
+  wire [9:0] result_15;
+  // /home/sandy/prj/fpga-experiments/Test.hs:61:1-3
+  wire signed [63:0] c$ds2_app_arg;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_4 = 10'd0;
+  wire [10:0] result_16;
+  wire [10:0] z_4;
+  wire [9:0] result_17;
+  // /home/sandy/prj/fpga-experiments/Test.hs:91:1-7
+  wire signed [63:0] c$a_app_arg;
+  wire [10:0] result_18;
+  // /home/sandy/prj/fpga-experiments/Test.hs:91:1-7
+  wire signed [63:0] c$b_app_arg;
+  wire [9:0] result_19;
+  wire  c$app_arg_1;
+  wire  c$app_arg_2;
+  wire  result_20;
+  // /home/sandy/prj/fpga-experiments/Test.hs:48:1-10
+  wire [9:0] ix;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_5 = 10'd0;
+  wire [10:0] result_21;
+  wire [10:0] z_5;
+  wire [9:0] result_22;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [8:0] r_6 = 9'd0;
+  wire [9:0] result_23;
+  wire [9:0] z_6;
+  wire [8:0] result_24;
+  wire [8:0] result_25;
+  wire  result_26;
+  wire signed [63:0] c$m_app_arg;
+  wire [9:0] result_27;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_7 = 10'd0;
+  wire [10:0] result_28;
+  wire [10:0] z_7;
+  wire [9:0] result_29;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire signed [63:0] c$b1_app_arg;
+  wire [10:0] result_30;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire signed [63:0] c$x_app_arg;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire [0:0] c$x_app_arg_0;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire [1:0] c$x_case_alt;
+  wire [1:0] result_31;
+  wire  result_32;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_8 = 10'd0;
+  wire [10:0] result_33;
+  wire [10:0] z_8;
+  wire [9:0] result_34;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [8:0] r_9 = 9'd0;
+  wire [9:0] result_35;
+  wire [9:0] z_9;
+  wire [8:0] result_36;
+  wire [8:0] result_37;
+  // /home/sandy/prj/fpga-experiments/Test.hs:48:1-10
+  wire [9:0] ix_0;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire  v;
+  // /home/sandy/prj/fpga-experiments/Test.hs:103:1-4
+  wire [9:0] a1_0;
+  wire [8:0] a1_1;
+  // /home/sandy/prj/fpga-experiments/Test.hs:45:1-8
+  wire signed [63:0] c$x_app_arg_1;
+  wire [9:0] result_38;
+  wire [0:0] c$app_arg_3;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [9:0] r_10 = 10'd0;
+  wire [10:0] result_39;
+  wire [10:0] z_10;
+  wire [9:0] result_40;
+  // /home/sandy/prj/fpga-experiments/Test.hs:53:1-9
+  reg [8:0] r_11 = 9'd0;
+  wire [9:0] result_41;
+  wire [9:0] z_11;
+  wire [8:0] result_42;
+  wire [8:0] result_43;
+  wire [10:0] c$bv;
+  wire [10:0] c$bv_0;
+  wire [9:0] c$bv_1;
+  wire [10:0] c$bv_2;
+  wire [9:0] c$bv_3;
+  wire [10:0] c$bv_4;
+  wire [10:0] c$bv_5;
+  wire [9:0] c$bv_6;
+  wire [10:0] c$bv_7;
+  wire [10:0] c$bv_8;
+  wire [9:0] c$bv_9;
+  wire [10:0] c$bv_10;
+  wire [9:0] c$bv_11;
+  wire [7:0] result;
 
   // resetGen begin
   // pragma translate_off
@@ -33,32 +163,335 @@ module topEntity
   // pragma translate_on
   // resetGen end
 
-  assign c$s1_case_alt = (s == 25'd26999999) ? {25'd0,
-                                                ~ i} : {s + 25'd1,   i};
-
-  assign result_0 = s1[0:0];
-
-  assign s = s1[25:1];
-
-  assign i = s1[0:0];
-
   // register begin
-  always @(posedge clk or  posedge  c$app_arg) begin : s1_register
+  always @(posedge clk or  posedge  c$app_arg) begin : r_register
     if ( c$app_arg) begin
-      s1 <= {25'd0,   1'b0};
+      r <= 10'd0;
     end else begin
-      s1 <= c$s1_case_alt;
+      r <= result_1;
     end
   end
   // register end
 
-  assign result = {(c$app_arg_0),   1'b0};
+  assign result_0 = {r,   r == 10'd754};
 
-  assign c$app_arg_0 = result_0 ? 1'b1 : 1'b0;
+  assign z = 10'd1 + r;
 
-  assign out0 = result[1:1];
+  assign c$bv = (z - 11'd755);
 
-  assign out1 = result[0:0];
+  assign result_1 = (z >= 11'd755) ? (c$bv[0+:10]) : (z[0+:10]);
+
+  assign result_2 = (10'd656 <= a1) & (a1 <= 10'd751);
+
+  assign a1 = result_0[10:1];
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_0_register
+    if ( c$app_arg) begin
+      r_0 <= 10'd0;
+    end else begin
+      r_0 <= result_4;
+    end
+  end
+  // register end
+
+  assign result_3 = {r_0,   r_0 == 10'd754};
+
+  assign z_0 = 10'd1 + r_0;
+
+  assign c$bv_0 = (z_0 - 11'd755);
+
+  assign result_4 = (z_0 >= 11'd755) ? (c$bv_0[0+:10]) : (z_0[0+:10]);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_1_register
+    if ( c$app_arg) begin
+      r_1 <= 9'd0;
+    end else if (result_3[0:0]) begin
+      r_1 <= result_6;
+    end
+  end
+  // register end
+
+  assign result_5 = {r_1,   r_1 == 9'd491};
+
+  assign z_1 = 9'd1 + r_1;
+
+  assign c$bv_1 = (z_1 - 10'd492);
+
+  assign result_6 = (z_1 >= 10'd492) ? (c$bv_1[0+:9]) : (z_1[0+:9]);
+
+  assign result_7 = result_5[9:1];
+
+  assign result_8 = (9'd491 <= result_7) & (result_7 <= 9'd492);
+
+  assign result_9 = result_15[9:9] ? ((c$app_arg_0)) : (1'b0);
+
+  assign x = result_15[8:0];
+
+  assign c$app_arg_0 = ((9'd150 <= x) & (x <= 9'd250)) ? 1'b1 : 1'b0;
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_2_register
+    if ( c$app_arg) begin
+      r_2 <= 10'd0;
+    end else begin
+      r_2 <= result_11;
+    end
+  end
+  // register end
+
+  assign result_10 = {r_2,   r_2 == 10'd754};
+
+  assign z_2 = 10'd1 + r_2;
+
+  assign c$bv_2 = (z_2 - 11'd755);
+
+  assign result_11 = (z_2 >= 11'd755) ? (c$bv_2[0+:10]) : (z_2[0+:10]);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_3_register
+    if ( c$app_arg) begin
+      r_3 <= 9'd0;
+    end else if (result_10[0:0]) begin
+      r_3 <= result_13;
+    end
+  end
+  // register end
+
+  assign result_12 = {r_3,   r_3 == 9'd491};
+
+  assign z_3 = 9'd1 + r_3;
+
+  assign c$bv_3 = (z_3 - 10'd492);
+
+  assign result_13 = (z_3 >= 10'd492) ? (c$bv_3[0+:9]) : (z_3[0+:9]);
+
+  assign result_14 = result_12[9:1];
+
+  assign result_15 = (result_14 <= 9'd479) ? {1'b1,$unsigned(c$ds2_app_arg[0+:9])} : {1'b0,9'bxxxxxxxxx};
+
+  assign c$ds2_app_arg = $unsigned({{(64-9) {1'b0}},result_14});
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_4_register
+    if ( c$app_arg) begin
+      r_4 <= 10'd0;
+    end else begin
+      r_4 <= result_17;
+    end
+  end
+  // register end
+
+  assign result_16 = {r_4,   r_4 == 10'd754};
+
+  assign z_4 = 10'd1 + r_4;
+
+  assign c$bv_4 = (z_4 - 11'd755);
+
+  assign result_17 = (z_4 >= 11'd755) ? (c$bv_4[0+:10]) : (z_4[0+:10]);
+
+  assign c$a_app_arg = $unsigned({{(64-10) {1'b0}},ix});
+
+  assign result_18 = (ix <= 10'd639) ? {1'b1,$unsigned(c$a_app_arg[0+:10])} : {1'b0,10'bxxxxxxxxxx};
+
+  assign c$b_app_arg = $unsigned({{(64-9) {1'b0}},result_25});
+
+  assign result_19 = (result_25 <= 9'd479) ? {1'b1,$unsigned(c$b_app_arg[0+:9])} : {1'b0,9'bxxxxxxxxx};
+
+  assign c$app_arg_1 = result_18[10:10] ? 1'b1 : 1'b0;
+
+  assign c$app_arg_2 = result_19[9:9] ? 1'b1 : 1'b0;
+
+  assign result_20 = c$app_arg_1 & c$app_arg_2;
+
+  assign ix = result_16[10:1];
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_5_register
+    if ( c$app_arg) begin
+      r_5 <= 10'd0;
+    end else begin
+      r_5 <= result_22;
+    end
+  end
+  // register end
+
+  assign result_21 = {r_5,   r_5 == 10'd754};
+
+  assign z_5 = 10'd1 + r_5;
+
+  assign c$bv_5 = (z_5 - 11'd755);
+
+  assign result_22 = (z_5 >= 11'd755) ? (c$bv_5[0+:10]) : (z_5[0+:10]);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_6_register
+    if ( c$app_arg) begin
+      r_6 <= 9'd0;
+    end else if (result_21[0:0]) begin
+      r_6 <= result_24;
+    end
+  end
+  // register end
+
+  assign result_23 = {r_6,   r_6 == 9'd491};
+
+  assign z_6 = 9'd1 + r_6;
+
+  assign c$bv_6 = (z_6 - 10'd492);
+
+  assign result_24 = (z_6 >= 10'd492) ? (c$bv_6[0+:9]) : (z_6[0+:9]);
+
+  assign result_25 = result_23[9:1];
+
+  assign result_26 = result_20 ? result_9 : (1'b0);
+
+  assign c$m_app_arg = $unsigned({{(64-9) {1'b0}},result_37});
+
+  assign result_27 = (result_37 <= 9'd479) ? {1'b1,$unsigned(c$m_app_arg[0+:9])} : {1'b0,9'bxxxxxxxxx};
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_7_register
+    if ( c$app_arg) begin
+      r_7 <= 10'd0;
+    end else begin
+      r_7 <= result_29;
+    end
+  end
+  // register end
+
+  assign result_28 = {r_7,   r_7 == 10'd754};
+
+  assign z_7 = 10'd1 + r_7;
+
+  assign c$bv_7 = (z_7 - 11'd755);
+
+  assign result_29 = (z_7 >= 11'd755) ? (c$bv_7[0+:10]) : (z_7[0+:10]);
+
+  assign c$b1_app_arg = $unsigned({{(64-10) {1'b0}},ix_0});
+
+  assign result_30 = (ix_0 <= 10'd639) ? {1'b1,$unsigned(c$b1_app_arg[0+:10])} : {1'b0,10'bxxxxxxxxxx};
+
+  assign c$x_app_arg = $unsigned({{(64-9) {1'b0}},a1_1});
+
+  assign c$x_app_arg_0 = (a1_0 <= ($unsigned(c$x_app_arg[0+:10]))) ? 1'b1 : 1'b0;
+
+  assign c$x_case_alt = result_27[9:9] ? {1'b1,(c$x_app_arg_0)} : {1'b0,1'bx};
+
+  assign result_31 = result_30[10:10] ? c$x_case_alt : {1'b0,1'bx};
+
+  assign result_32 = result_31[1:1] ? v : (1'b0);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_8_register
+    if ( c$app_arg) begin
+      r_8 <= 10'd0;
+    end else begin
+      r_8 <= result_34;
+    end
+  end
+  // register end
+
+  assign result_33 = {r_8,   r_8 == 10'd754};
+
+  assign z_8 = 10'd1 + r_8;
+
+  assign c$bv_8 = (z_8 - 11'd755);
+
+  assign result_34 = (z_8 >= 11'd755) ? (c$bv_8[0+:10]) : (z_8[0+:10]);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_9_register
+    if ( c$app_arg) begin
+      r_9 <= 9'd0;
+    end else if (result_33[0:0]) begin
+      r_9 <= result_36;
+    end
+  end
+  // register end
+
+  assign result_35 = {r_9,   r_9 == 9'd491};
+
+  assign z_9 = 9'd1 + r_9;
+
+  assign c$bv_9 = (z_9 - 10'd492);
+
+  assign result_36 = (z_9 >= 10'd492) ? (c$bv_9[0+:9]) : (z_9[0+:9]);
+
+  assign result_37 = result_35[9:1];
+
+  assign ix_0 = result_28[10:1];
+
+  assign v = result_31[0:0];
+
+  assign a1_0 = result_30[9:0];
+
+  assign a1_1 = result_27[8:0];
+
+  assign c$x_app_arg_1 = $unsigned({{(64-9) {1'b0}},result_43});
+
+  assign result_38 = (result_43 <= 9'd479) ? {1'b1,$unsigned(c$x_app_arg_1[0+:9])} : {1'b0,9'bxxxxxxxxx};
+
+  assign c$app_arg_3 = result_38[9:9] ? 1'b1 : 1'b0;
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_10_register
+    if ( c$app_arg) begin
+      r_10 <= 10'd0;
+    end else begin
+      r_10 <= result_40;
+    end
+  end
+  // register end
+
+  assign result_39 = {r_10,   r_10 == 10'd754};
+
+  assign z_10 = 10'd1 + r_10;
+
+  assign c$bv_10 = (z_10 - 11'd755);
+
+  assign result_40 = (z_10 >= 11'd755) ? (c$bv_10[0+:10]) : (z_10[0+:10]);
+
+  // register begin
+  always @(posedge clk or  posedge  c$app_arg) begin : r_11_register
+    if ( c$app_arg) begin
+      r_11 <= 9'd0;
+    end else if (result_39[0:0]) begin
+      r_11 <= result_42;
+    end
+  end
+  // register end
+
+  assign result_41 = {r_11,   r_11 == 9'd491};
+
+  assign z_11 = 9'd1 + r_11;
+
+  assign c$bv_11 = (z_11 - 10'd492);
+
+  assign result_42 = (z_11 >= 10'd492) ? (c$bv_11[0+:9]) : (z_11[0+:9]);
+
+  assign result_43 = result_41[9:1];
+
+  assign result = {result_2,   result_8,   1'b0,
+                   1'b0,   result_26,   result_32,   1'b0,
+                   (c$app_arg_3)};
+
+  assign hsync = result[7:7];
+
+  assign vsync = result[6:6];
+
+  assign gnd = result[5:5];
+
+  assign all_gnd = result[4:4];
+
+  assign red = result[3:3];
+
+  assign green = result[2:2];
+
+  assign blue = result[1:1];
+
+  assign yvis = result[0:0];
 
 
 endmodule

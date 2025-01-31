@@ -14,7 +14,7 @@ build :
 	mkdir build
 
 build/blinky.json : src/Test.topEntity/topEntity.v build
-	yosys -D LEDS_NR=8 -p "read_verilog src/Test.topEntity/topEntity.v; synth_gowin -json build/blinky.json"
+	yosys -p "read_verilog src/Test.topEntity/topEntity.v; synth_gowin -json build/blinky.json"
 
 build/pnrblinky.json : build/blinky.json $(BOARD).cst build
 	nextpnr-himbaechel --json build/blinky.json --write build/pnrblinky.json --device $(DEVICE) --vopt cst=$(BOARD).cst --vopt family=$(FAMILY) --freq $(CLOCKFREQ)
