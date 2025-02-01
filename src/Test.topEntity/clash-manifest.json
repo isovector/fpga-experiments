@@ -35,17 +35,45 @@
         },
         {
             "name": "topEntity.v",
-            "sha256": "cf465b03f2d70e336ed5b9e7570b45ab18b5aec5b23c85b4a8776d6d645fa607"
+            "sha256": "a981d3a9ccfc0cbf9260e04d38930f4f528996504fb3da12593768cc45e956fb"
         }
     ],
     "flags": [
         20,
         20
     ],
-    "hash": "ec35ea9c2a45ced1eb2453461abaaf17839bd7b18cfb326965b9f0c0b04763b6",
+    "hash": "471b03b16e590502a348db7b5e60d4002f370d9952515bc07e087a5faf61a206",
     "top_component": {
         "name": "topEntity",
         "ports_flat": [
+            {
+                "direction": "in",
+                "is_clock": false,
+                "name": "p1_up",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "in",
+                "is_clock": false,
+                "name": "p1_down",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "in",
+                "is_clock": false,
+                "name": "p2_up",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "in",
+                "is_clock": false,
+                "name": "p2_down",
+                "type_name": "",
+                "width": 1
+            },
             {
                 "direction": "in",
                 "domain": "System",
@@ -65,6 +93,13 @@
                 "direction": "out",
                 "is_clock": false,
                 "name": "vsync",
+                "type_name": "",
+                "width": 1
+            },
+            {
+                "direction": "out",
+                "is_clock": false,
+                "name": "hot",
                 "type_name": "",
                 "width": 1
             },
@@ -106,7 +141,7 @@
             {
                 "direction": "out",
                 "is_clock": false,
-                "name": "yvis",
+                "name": "buzzer",
                 "type_name": "",
                 "width": 1
             }

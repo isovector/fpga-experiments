@@ -7,6 +7,9 @@ CLOCKFREQ=52
 push : build/pack.fs
 	openFPGALoader -b $(FPGABOARD) build/pack.fs
 
+flash : build/pack.fs
+	openFPGALoader -b $(FPGABOARD) -f build/pack.fs
+
 repl :
 	(cd ~/.src/clash-compiler; stack exec -- `which clashi`)
 
@@ -23,4 +26,4 @@ build/pack.fs : build/pnrblinky.json build
 	gowin_pack -d $(DEVICE) -o build/pack.fs build/pnrblinky.json
 
 
-.PHONY: push repl
+.PHONY: push flash repl
